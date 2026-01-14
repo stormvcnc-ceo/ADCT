@@ -35,7 +35,7 @@ export const PROJECTS = [
         description: '주상복합/오피스텔 분양',
         year: '2020',
         achievement: '791세대 분양 완료',
-        image: '/images/works/work-4.png'
+        image: '/images/works/work-4-v2.png'
     },
     {
         id: 5,
@@ -93,15 +93,7 @@ export const PROJECTS = [
         image: '/images/works/work-10.png'
     },
     // 브랜드 디자인
-    {
-        id: 11,
-        category: 'branding',
-        title: '오션브릿지 OCEAN BRIDGE',
-        description: '브랜드 아이덴티티 및 BI 디자인',
-        year: '2020',
-        achievement: 'BI 시스템 구축 완료',
-        image: '/images/works/work-11.png'
-    },
+
     {
         id: 12,
         category: 'branding',
