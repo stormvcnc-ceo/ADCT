@@ -116,7 +116,7 @@ const PrivacyPolicy = () => {
                         </p>
                         <div className="bg-muted p-6 rounded-lg space-y-2">
                             <p className="text-body text-muted-foreground">
-                                • <strong>위탁 대상자:</strong> EmailJS / 호스팅 업체명 등
+                                • <strong>위탁 대상자:</strong> EmailJS
                             </p>
                             <p className="text-body text-muted-foreground">
                                 • <strong>위탁 업무 내용:</strong> 이메일 발송 대행
