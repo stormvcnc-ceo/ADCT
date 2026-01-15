@@ -12,6 +12,7 @@ import { Label } from '@/components/ui/label';
 import { Checkbox } from '@/components/ui/checkbox';
 import { toast } from "sonner";
 import { EMAILJS_CONFIG } from '@/config/emailjs';
+import KakaoMap from '@/components/KakaoMap';
 
 const Contact = () => {
     useEffect(() => {
@@ -124,9 +125,8 @@ const Contact = () => {
                             </div>
                         </div>
 
-                        <div className="h-64 bg-muted rounded-lg w-full flex items-center justify-center text-muted-foreground">
-                            {/* Map Placeholder */}
-                            Map Area
+                        <div className="h-64 w-full rounded-lg overflow-hidden border border-border mt-4">
+                            <KakaoMap />
                         </div>
                     </div>
 
