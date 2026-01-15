@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>ADCT - 광고디자인 회사</title>
+    <link>https://adct.kr</link>
+    <description>ADCT 공식 웹사이트입니다.</description>
+    <language>ko</language>
+    <item>
+      <title>ADCT 웹사이트 오픈</title>
+      <link>https://adct.kr</link>
+      <description>ADCT 웹사이트가 공식 오픈되었습니다.</description>
+      <pubDate>Fri, 16 Jan 2026 00:00:00 +0900</pubDate>
+    </item>
+  </channel>
+</rss>
