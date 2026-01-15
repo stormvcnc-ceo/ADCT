@@ -44,6 +44,14 @@ const Contact = () => {
 
         setIsSubmitting(true);
 
+        // 환경변수 확인
+        if (!EMAILJS_CONFIG.serviceId || !EMAILJS_CONFIG.templateId || !EMAILJS_CONFIG.publicKey) {
+            toast.error("시스템 설정 오류: 이메일 서비스 연동 정보가 없습니다.");
+            console.error("EmailJS Config Error: Missing environment variables. Please check .env file and restart server.");
+            setIsSubmitting(false);
+            return;
+        }
+
         try {
             // EmailJS로 이메일 전송
             const templateParams = {
@@ -65,7 +73,9 @@ const Contact = () => {
             setFormData({ name: '', email: '', subject: '', message: '' });
         } catch (error) {
             console.error('EmailJS Error:', error);
-            toast.error("메시지 전송에 실패했습니다. 직접 이메일(gimeontae@gmail.com)로 문의해주세요.");
+            // 에러 메시지 상세 표시
+            const errorMessage = error instanceof Error ? error.message : JSON.stringify(error);
+            toast.error(`전송 실패: ${errorMessage}. (콘솔 확인 필요)`);
         } finally {
             setIsSubmitting(false);
         }

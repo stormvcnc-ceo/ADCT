@@ -8,6 +8,7 @@ declare global {
 
 const KakaoMap = () => {
     const containerRef = useRef<HTMLDivElement>(null);
+    const mapRef = useRef<any>(null);
 
     useEffect(() => {
         if (document.getElementById('kakao-map-script')) {
@@ -39,49 +40,78 @@ const KakaoMap = () => {
         if (!containerRef.current) return;
 
         const container = containerRef.current;
+        // 더 정확한 초기 좌표 (ADCT 오션타워 위치)
+        const defaultCoords = new window.kakao.maps.LatLng(35.156826, 129.150821);
+
         const options = {
-            center: new window.kakao.maps.LatLng(35.1586, 129.1536), // Default fallback: approximate Ocean Tower
+            center: defaultCoords,
             level: 3,
         };
 
         const map = new window.kakao.maps.Map(container, options);
+        mapRef.current = map;
 
-        // Resize observer to handle container size changes
-        // checking if ResizeObserver is supported or just simple resize event
+        // ResizeObserver를 사용하여 컨테이너 크기 변경 감지 (모바일 반응형 대응)
+        let resizeObserver: ResizeObserver | null = null;
+
         const handleResize = () => {
-            map.relayout();
-            map.setCenter(new window.kakao.maps.LatLng(35.156826, 129.150821)); // Re-center on resize
+            if (mapRef.current) {
+                // 지도 재조정
+                mapRef.current.relayout();
+                // 중심 재설정 (주소 검색 결과가 있으면 그 좌표로, 없으면 기본 좌표로)
+                const currentCenter = mapRef.current.getCenter();
+                mapRef.current.setCenter(currentCenter);
+            }
         };
+
+        // Window resize 이벤트 리스너
         window.addEventListener('resize', handleResize);
 
+        // ResizeObserver로 컨테이너 크기 변경 감지
+        if (typeof ResizeObserver !== 'undefined') {
+            resizeObserver = new ResizeObserver(() => {
+                handleResize();
+            });
+            resizeObserver.observe(container);
+        }
 
-        // Geocoder to get exact coords
+        // Geocoder로 정확한 좌표 검색
         const geocoder = new window.kakao.maps.services.Geocoder();
 
         geocoder.addressSearch('부산광역시 해운대구 해운대해변로 203', function (result: any, status: any) {
             if (status === window.kakao.maps.services.Status.OK) {
                 const coords = new window.kakao.maps.LatLng(result[0].y, result[0].x);
 
-                // Update center 
+                // 지도 재조정 후 중심 설정 (모바일에서 중요)
+                map.relayout();
                 map.setCenter(coords);
 
-                // Marker
+                // 마커 생성
                 const marker = new window.kakao.maps.Marker({
                     map: map,
                     position: coords
                 });
 
-                // Window with info
+                // 정보창
                 const infowindow = new window.kakao.maps.InfoWindow({
                     content: '<div style="width:150px;text-align:center;padding:6px 0;font-size:14px;color:#000;">ADCT</div>'
                 });
                 infowindow.open(map, marker);
+
+                // 주소 검색 완료 후 약간의 지연을 두고 다시 중심 설정 (모바일 렌더링 타이밍 이슈 대응)
+                setTimeout(() => {
+                    map.relayout();
+                    map.setCenter(coords);
+                }, 100);
             }
         });
 
-        // Return cleanup function for this specific map instance
+        // Cleanup 함수
         return () => {
             window.removeEventListener('resize', handleResize);
+            if (resizeObserver) {
+                resizeObserver.disconnect();
+            }
         };
     };
 
