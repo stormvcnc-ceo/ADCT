@@ -2,6 +2,7 @@
 import { Link } from 'react-router-dom';
 import PageLayout from '@/components/PageLayout';
 import { COMPANY_INFO } from '@/config/company';
+import ObfuscatedEmail from '@/components/ObfuscatedEmail';
 
 const BusinessInfo = () => {
     return (
@@ -60,9 +61,7 @@ const BusinessInfo = () => {
                                 <li className="flex flex-col sm:flex-row sm:items-baseline">
                                     <span className="text-sm font-medium text-muted-foreground w-28 shrink-0">이메일</span>
                                     <div className="text-base flex items-center flex-wrap gap-x-4 gap-y-2">
-                                        <div className="h-7 overflow-hidden flex items-center">
-                                            <img src="/images/email-dark.png" alt="Email" className="h-32 max-w-none object-cover -ml-1" />
-                                        </div>
+                                        <ObfuscatedEmail />
                                         <Link to="/email-refusal" className="text-[10px] sm:text-xs px-2 py-1 border border-border rounded text-muted-foreground hover:text-foreground hover:border-foreground transition-colors">
                                             이메일무단수집거부
                                         </Link>

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { COMPANY_INFO, NAV_ITEMS } from '@/config/company';
+import ObfuscatedEmail from '@/components/ObfuscatedEmail';
 
 const Footer = () => {
   return (
@@ -41,7 +42,7 @@ const Footer = () => {
               {COMPANY_INFO.name.full} | 대표자: {COMPANY_INFO.ceo.name} | 사업자등록번호: {COMPANY_INFO.business.registrationNumber}
             </p>
             <p>
-              주소: {COMPANY_INFO.address.full} | Tel: {COMPANY_INFO.contact.phone} | Fax: {COMPANY_INFO.contact.fax} | Email: <span>{COMPANY_INFO.contact.email.split('@')[0]}</span><span className="hidden">_no_spam_</span><span>@</span><span>{COMPANY_INFO.contact.email.split('@')[1]}</span>
+              주소: {COMPANY_INFO.address.full} | Tel: {COMPANY_INFO.contact.phone} | Fax: {COMPANY_INFO.contact.fax} | Email: <ObfuscatedEmail />
             </p>
           </div>
 

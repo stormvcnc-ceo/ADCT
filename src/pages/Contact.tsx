@@ -14,6 +14,7 @@ import { toast } from "sonner";
 import { EMAILJS_CONFIG } from '@/config/emailjs';
 import { COMPANY_INFO } from '@/config/company';
 import KakaoMap from '@/components/KakaoMap';
+import ObfuscatedEmail from '@/components/ObfuscatedEmail';
 
 const Contact = () => {
     useEffect(() => {
@@ -115,9 +116,7 @@ const Contact = () => {
                             <h3 className="text-headline mb-6">Contact Info</h3>
                             <div className="text-body text-muted-foreground mb-2 flex items-center gap-2">
                                 <span className="font-medium text-foreground">Email:</span>
-                                <div className="h-7 overflow-hidden flex items-center">
-                                    <img src="/images/email-dark.png" alt="Email" className="h-40 max-w-none mix-blend-multiply" />
-                                </div>
+                                <ObfuscatedEmail />
                             </div>
                             <p className="text-body text-muted-foreground">
                                 <span className="font-medium text-foreground">Tel:</span> {COMPANY_INFO.contact.phone}
