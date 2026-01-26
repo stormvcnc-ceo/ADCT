@@ -67,8 +67,8 @@ const Index = () => {
             </div>
             <div className="relative">
               <img
-                src="/images/brand-manifesto.png"
-                alt="Creative team collaboration"
+                src="/images/brand-manifesto-korean.png"
+                alt="Creative team collaboration with Korean professionals"
                 className="w-full h-96 object-cover rounded-lg shadow-elegant"
                 loading="lazy"
               />
@@ -93,7 +93,7 @@ const Index = () => {
               {
                 title: "Campaign Strategy",
                 description: "데이터와 인사이트 기반으로 강력한 캠페인 전략을 수립합니다.",
-                image: "/images/service-strategy.png"
+                image: "/images/service-strategy-korean.png"
               },
               {
                 title: "Creative Production",

@@ -24,7 +24,7 @@ export const COMPANY_INFO = {
     // 연락처
     contact: {
         email: 'gimeontae@gmail.com',
-        phone: '051-740-5716',
+        phone: '051-740-5715',
         fax: '051-740-5716' // 팩스번호
     },
 

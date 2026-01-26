@@ -5,75 +5,66 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-light tracking-tight mb-4">{COMPANY_INFO.name.english}</h3>
-            <p className="text-body text-primary-foreground/80 max-w-md mb-4">
+            <Link to="/" className="inline-block">
+              <h3 className="text-3xl font-light tracking-tight mb-6 hover:opacity-80 transition-opacity">
+                {COMPANY_INFO.name.english}
+              </h3>
+            </Link>
+            <p className="text-body text-primary-foreground/80 max-w-md mb-4 leading-relaxed">
               {COMPANY_INFO.description.korean}<br />
-              {COMPANY_INFO.description.english}
+              <span className="text-sm opacity-70">{COMPANY_INFO.description.english}</span>
             </p>
-
-            {/* 회사 정보 */}
-            <div className="text-sm text-primary-foreground/70 space-y-1 mt-6">
-              <p><strong>상호명:</strong> {COMPANY_INFO.name.full}</p>
-              <p><strong>대표자:</strong> {COMPANY_INFO.ceo.name}</p>
-              {COMPANY_INFO.business.registrationNumber && (
-                <p><strong>사업자등록번호:</strong> {COMPANY_INFO.business.registrationNumber}</p>
-              )}
-              <p><strong>개인정보보호책임자:</strong> {COMPANY_INFO.privacy.officer}</p>
-            </div>
           </div>
 
           {/* Navigation */}
-          <div>
-            <h4 className="text-caption mb-4">Navigation</h4>
-            <ul className="space-y-2">
+          <div className="md:ml-auto">
+            <h4 className="text-caption mb-6 opacity-60">Navigation</h4>
+            <ul className="space-y-3">
               {NAV_ITEMS.map((item) => (
                 <li key={item.path}>
-                  <Link to={item.path} className="text-sm hover:text-white transition-colors">
+                  <Link to={item.path} className="text-sm hover:text-white text-primary-foreground/80 transition-colors">
                     {item.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
-
-          {/* Contact */}
-          <div>
-            <h4 className="text-caption mb-4">Contact</h4>
-            <div className="space-y-2 text-sm text-primary-foreground/80">
-              <div className="h-7 overflow-hidden flex items-center">
-                <img src="/images/email-white.png" alt="Email" className="h-40 max-w-none mix-blend-screen object-cover" />
-              </div>
-              <p>T. {COMPANY_INFO.contact.phone}</p>
-              {COMPANY_INFO.contact.fax && <p>F. {COMPANY_INFO.contact.fax}</p>}
-              <p>
-                {COMPANY_INFO.address.street}<br />
-                {COMPANY_INFO.address.building}
-              </p>
-              <p className="text-xs mt-2">우편번호: {COMPANY_INFO.address.postalCode}</p>
-              <p className="text-[10px] text-primary-foreground/50 mt-4 leading-tight break-keep">
-                본 웹사이트에 게시된 이메일 주소가 무단으로 수집되는 것을 거부하며, 위반 시 정보통신망법에 의해 처벌될 수 있습니다.
-              </p>
-            </div>
-          </div>
         </div>
 
-        <div className="border-t border-primary-foreground/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-primary-foreground/60">
-            © {COMPANY_INFO.copyright.year} {COMPANY_INFO.copyright.text} <span className="mx-1">|</span> 본 사이트의 모든 디자인 자산은 저작권법의 보호를 받습니다.
-          </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link to="/privacy-policy" className="text-sm text-primary-foreground/60 hover:text-white transition-colors">
-              개인정보처리방침
-            </Link>
-            <Link to="/terms-of-service" className="text-sm text-primary-foreground/60 hover:text-white transition-colors">
-              이용약관
-            </Link>
-            <Link to="/email-refusal" className="text-sm font-medium text-primary-foreground/80 hover:text-white transition-colors border px-2 py-0.5 rounded border-white/20 hover:border-white/50">
-              이메일무단수집거부
-            </Link>
+        {/* Legal Info (Minimal) */}
+        <div className="border-t border-primary-foreground/10 mt-16 pt-8">
+          <div className="text-[10px] text-primary-foreground/40 mb-4 space-y-1">
+            <p>
+              {COMPANY_INFO.name.full} | 대표자: {COMPANY_INFO.ceo.name} | 사업자등록번호: {COMPANY_INFO.business.registrationNumber}
+            </p>
+            <p>
+              주소: {COMPANY_INFO.address.full} | Tel: {COMPANY_INFO.contact.phone} | Fax: {COMPANY_INFO.contact.fax} | Email: <span>{COMPANY_INFO.contact.email.split('@')[0]}</span><span className="hidden">_no_spam_</span><span>@</span><span>{COMPANY_INFO.contact.email.split('@')[1]}</span>
+            </p>
+          </div>
+
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-xs text-primary-foreground/40">
+              © {COMPANY_INFO.copyright.year} {COMPANY_INFO.copyright.text}. All rights reserved.
+            </p>
+            <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+              <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+                <Link to="/business-info" className="text-xs font-medium text-primary-foreground/70 hover:text-white transition-colors">
+                  회사정보 보기
+                </Link>
+                <Link to="/privacy-policy" className="text-xs text-primary-foreground/50 hover:text-white transition-colors">
+                  개인정보처리방침
+                </Link>
+                <Link to="/terms-of-service" className="text-xs text-primary-foreground/50 hover:text-white transition-colors">
+                  이용약관
+                </Link>
+                <Link to="/email-refusal" className="text-xs text-primary-foreground/50 hover:text-white transition-colors">
+                  이메일무단수집거부
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>

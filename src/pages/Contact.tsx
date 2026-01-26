@@ -12,6 +12,7 @@ import { Label } from '@/components/ui/label';
 import { Checkbox } from '@/components/ui/checkbox';
 import { toast } from "sonner";
 import { EMAILJS_CONFIG } from '@/config/emailjs';
+import { COMPANY_INFO } from '@/config/company';
 import KakaoMap from '@/components/KakaoMap';
 
 const Contact = () => {
@@ -119,7 +120,7 @@ const Contact = () => {
                                 </div>
                             </div>
                             <p className="text-body text-muted-foreground">
-                                <span className="font-medium text-foreground">Tel:</span> 051-740-5716
+                                <span className="font-medium text-foreground">Tel:</span> {COMPANY_INFO.contact.phone}
                             </p>
                             <p className="text-[10px] text-muted-foreground/60 mt-4 leading-tight break-keep max-w-sm">
                                 본 웹사이트에 게시된 이메일 주소가 무단으로 수집되는 것을 거부하며, 위반 시 정보통신망법에 의해 처벌될 수 있습니다.

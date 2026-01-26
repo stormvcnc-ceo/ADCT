@@ -132,7 +132,7 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
               <img
-                src="/images/about-team.png"
+                src="/images/creative-meeting-korean.png"
                 alt="Team collaboration"
                 className="w-full h-96 object-cover rounded-lg shadow-elegant"
                 loading="lazy"

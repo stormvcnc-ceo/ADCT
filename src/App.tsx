@@ -12,6 +12,7 @@ import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import EmailRefusal from "./pages/EmailRefusal";
+import BusinessInfo from "./pages/BusinessInfo";
 import NotFound from "./pages/NotFound";
 
 const App = () => (
@@ -30,6 +31,7 @@ const App = () => (
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/email-refusal" element={<EmailRefusal />} />
+        <Route path="/business-info" element={<BusinessInfo />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
