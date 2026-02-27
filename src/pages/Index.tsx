@@ -67,8 +67,8 @@ const Index = () => {
             </div>
             <div className="relative">
               <img
-                src="/images/brand-manifesto-korean.png"
-                alt="Creative team collaboration with Korean professionals"
+                src="/images/brand-manifesto-abstract.png"
+                alt="Abstract 3D artwork representing creative ideas and powerful impact"
                 className="w-full h-96 object-cover rounded-lg shadow-elegant"
                 loading="lazy"
               />

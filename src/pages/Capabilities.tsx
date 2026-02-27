@@ -84,11 +84,11 @@ const Capabilities = () => {
         <div className="max-w-4xl mx-auto text-center px-6">
           <h2 className="text-display mb-6">Ready to start your project?</h2>
           <div className="flex justify-center gap-4">
-            <Button asChild size="lg">
-              <Link to="/contact">프로젝트 문의하기</Link>
-            </Button>
             <Button asChild variant="outline" size="lg">
               <Link to="/process">작업 과정 보기</Link>
+            </Button>
+            <Button asChild size="lg">
+              <Link to="/contact">프로젝트 문의하기</Link>
             </Button>
           </div>
         </div>
