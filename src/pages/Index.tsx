@@ -5,6 +5,7 @@ import Navigation from '@/components/Navigation';
 import ScrollToTop from '@/components/ScrollToTop';
 import Footer from '@/components/Footer';
 import MainHero from '@/components/MainHero';
+import AiBadgeWrapper from '@/components/AiBadgeWrapper';
 
 const Index = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -65,14 +66,14 @@ const Index = () => {
                 </p>
               </div>
             </div>
-            <div className="relative">
+            <AiBadgeWrapper className="relative w-full h-96 block">
               <img
                 src="/images/brand-manifesto-abstract.png"
                 alt="Abstract 3D artwork representing creative ideas and powerful impact"
-                className="w-full h-96 object-cover rounded-lg shadow-elegant"
+                className="w-full h-full object-cover rounded-lg shadow-elegant"
                 loading="lazy"
               />
-            </div>
+            </AiBadgeWrapper>
           </div>
         </div>
       </section>
@@ -107,15 +108,15 @@ const Index = () => {
               }
             ].map((service, index) => (
               <div key={index} className="group cursor-pointer">
-                <div className="relative overflow-hidden rounded-lg mb-6">
+                <AiBadgeWrapper className="relative overflow-hidden rounded-lg mb-6 block w-full h-64">
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
-                </div>
+                </AiBadgeWrapper>
                 <h3 className="text-headline mb-3">{service.title}</h3>
                 <p className="text-body text-muted-foreground">{service.description}</p>
               </div>

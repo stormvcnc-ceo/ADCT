@@ -193,6 +193,11 @@ const MainHero = () => {
             >
                 <div className="w-[1px] h-20 bg-gradient-to-b from-white/0 via-white/50 to-white/0" />
             </motion.div>
+
+            {/* AI Image License Notice */}
+            <div className="absolute bottom-6 left-6 z-10 bg-black/60 backdrop-blur-[2px] border border-white/10 text-[10px] text-white/70 px-2.5 py-0.5 rounded-sm select-none pointer-events-none tracking-wider font-light">
+                A.I 생성으로 만든 이미지입니다
+            </div>
         </div>
     );
 };

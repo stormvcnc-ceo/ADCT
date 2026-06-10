@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import Navigation from '@/components/Navigation';
 import ScrollToTop from '@/components/ScrollToTop';
 import Footer from '@/components/Footer';
+import AiBadgeWrapper from '@/components/AiBadgeWrapper';
 
 const About = () => {
   const storyRef = useRef<HTMLDivElement>(null);
@@ -76,14 +77,14 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="relative">
+            <AiBadgeWrapper className="relative w-full h-96 block">
               <img
                 src="/images/about-story.png"
                 alt="Creative process"
-                className="w-full h-96 object-cover rounded-lg shadow-elegant"
+                className="w-full h-full object-cover rounded-lg shadow-elegant"
                 loading="lazy"
               />
-            </div>
+            </AiBadgeWrapper>
           </div>
         </div>
       </section>
@@ -130,14 +131,14 @@ const About = () => {
       <section ref={teamRef} className="py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative">
+            <AiBadgeWrapper className="relative w-full h-96 block">
               <img
                 src="/images/team-roles-abstract.png"
                 alt="Abstract representation of four core advertising roles: Copywriter, Art Director, Brand Strategist, and Creative Director interacting harmoniously"
-                className="w-full h-96 object-cover rounded-lg shadow-elegant"
+                className="w-full h-full object-cover rounded-lg shadow-elegant"
                 loading="lazy"
               />
-            </div>
+            </AiBadgeWrapper>
             <div>
               <h2 className="text-display mb-8">Our Team</h2>
               <div className="space-y-6 text-body text-muted-foreground">

@@ -99,3 +99,7 @@ Thumbs.db
 # --- Uploaded Files ---
 uploaded_files/
 
+# --- Antigravity AI Management (Local Only) ---
+project_status.md
+.agents/
+
