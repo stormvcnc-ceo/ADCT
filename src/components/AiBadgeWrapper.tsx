@@ -21,8 +21,8 @@ export const AiBadgeWrapper: React.FC<AiBadgeWrapperProps> = ({
   return (
     <div className={className}>
       {children}
-      <span className={`absolute ${positionClasses[badgePosition]} z-10 bg-black/60 backdrop-blur-[2px] border border-white/10 text-[10px] text-white/70 px-2.5 py-0.5 rounded-sm select-none pointer-events-none tracking-wider font-light`}>
-        A.I 생성으로 만든 이미지입니다
+      <span className={`absolute ${positionClasses[badgePosition]} z-10 bg-black/60 backdrop-blur-[2px] border border-white/10 text-[10px] text-white/70 px-2 py-0.5 rounded-sm select-none pointer-events-none tracking-widest font-mono font-medium`}>
+        A.I
       </span>
     </div>
   );

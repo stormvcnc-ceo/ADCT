@@ -1,55 +1,49 @@
-
-import { useEffect } from 'react';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-import ScrollToTop from '@/components/ScrollToTop';
+import PageLayout from '@/components/PageLayout';
+import ObfuscatedEmail from '@/components/ObfuscatedEmail';
 import { COMPANY_INFO } from '@/config/company';
 
 const TermsOfService = () => {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
-
     return (
-        <div className="min-h-screen bg-background">
-            <Navigation />
+        <PageLayout>
+            <main className="pt-32 pb-24 px-6 lg:px-8 max-w-4xl mx-auto min-h-[70vh]">
+                <div className="mb-12 space-y-2">
+                    <span className="text-xs uppercase tracking-widest text-cyan-400 font-semibold font-mono">Terms &amp; Agreement</span>
+                    <h1 className="text-3xl sm:text-5xl font-black text-white">이용약관</h1>
+                    <p className="text-xs font-mono text-slate-400">
+                        최종 수정일: 2026년 2월 12일
+                    </p>
+                </div>
 
-            <main className="pt-32 pb-16 px-6 lg:px-8 max-w-4xl mx-auto">
-                <h1 className="text-3xl font-light tracking-tight mb-8">이용약관</h1>
-                <p className="text-sm text-muted-foreground mb-12">
-                    최종 수정일: 2026년 2월 12일
-                </p>
-
-                <div className="prose prose-gray max-w-none space-y-8 text-body text-muted-foreground">
-                    <section>
-                        <h2 className="text-xl font-medium text-foreground mb-4">제1조 (목적)</h2>
+                <div className="space-y-10 text-sm text-slate-300 font-light leading-relaxed">
+                    <div className="p-8 rounded-3xl bg-white/[0.02] border border-white/10 space-y-3">
+                        <h2 className="text-lg font-bold text-white">제1조 (목적)</h2>
                         <p>
                             본 약관은 {COMPANY_INFO.name.full}(이하 "회사"라 함)가 운영하는 웹사이트(이하 "사이트"라 함)에서 제공하는 인터넷 관련 서비스(이하 "서비스"라 함)를 이용함에 있어 회사와 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.
                         </p>
-                    </section>
+                    </div>
 
-                    <section>
-                        <h2 className="text-xl font-medium text-foreground mb-4">제2조 (정의)</h2>
+                    <div className="p-8 rounded-3xl bg-white/[0.02] border border-white/10 space-y-3">
+                        <h2 className="text-lg font-bold text-white">제2조 (정의)</h2>
                         <ol className="list-decimal pl-5 space-y-2">
                             <li>"사이트"란 회사가 제공하는 재화 또는 용역에 대한 정보를 이용자에게 제공하기 위하여 컴퓨터 등 정보통신설비를 이용하여 운영하는 웹사이트를 말합니다.</li>
                             <li>"이용자"란 사이트에 접속하여 이 약관에 따라 회사가 제공하는 서비스를 받는 자를 말합니다.</li>
                         </ol>
-                    </section>
+                    </div>
 
-                    <section>
-                        <h2 className="text-xl font-medium text-foreground mb-4">제3조 (약관의 명시와 설명 및 개정)</h2>
+                    <div className="p-8 rounded-3xl bg-white/[0.02] border border-white/10 space-y-3">
+                        <h2 className="text-lg font-bold text-white">제3조 (약관의 명시와 설명 및 개정)</h2>
                         <ol className="list-decimal pl-5 space-y-2">
                             <li>회사는 이 약관의 내용과 상호 및 대표자 성명, 영업소 소재지 주소, 전화번호, 모사전송번호, 전자우편주소, 사업자등록번호 등을 이용자가 쉽게 알 수 있도록 사이트의 초기 서비스화면(전면)에 게시합니다.</li>
                             <li>회사는 「약관의 규제에 관한 법률」, 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」 등 관련 법을 위배하지 않는 범위에서 이 약관을 개정할 수 있습니다.</li>
                             <li>회사가 약관을 개정할 경우에는 적용일자 및 개정사유를 명시하여 현행약관과 함께 몰의 초기화면에 그 적용일자 7일 이전부터 적용일자 전일까지 공지합니다.</li>
                         </ol>
-                    </section>
+                    </div>
 
-                    <section>
-                        <h2 className="text-xl font-medium text-foreground mb-4">제4조 (서비스의 제공 및 변경)</h2>
+                    <div className="p-8 rounded-3xl bg-white/[0.02] border border-white/10 space-y-3">
+                        <h2 className="text-lg font-bold text-white">제4조 (서비스의 제공 및 변경)</h2>
                         <ol className="list-decimal pl-5 space-y-2">
                             <li>회사는 다음과 같은 업무를 수행합니다.
-                                <ul className="list-disc pl-5 mt-2 space-y-1">
+                                <ul className="list-disc pl-5 mt-2 space-y-1 text-slate-400">
                                     <li>회사의 재화 또는 용역에 대한 정보 제공</li>
                                     <li>이용자 문의 및 상담 서비스</li>
                                     <li>기타 회사가 정하는 업무</li>
@@ -57,33 +51,33 @@ const TermsOfService = () => {
                             </li>
                             <li>회사는 필요한 경우 서비스의 내용을 변경할 수 있으며, 변경사항은 사이트를 통해 공지합니다.</li>
                         </ol>
-                    </section>
+                    </div>
 
-                    <section>
-                        <h2 className="text-xl font-medium text-foreground mb-4">제5조 (서비스의 중단)</h2>
+                    <div className="p-8 rounded-3xl bg-white/[0.02] border border-white/10 space-y-3">
+                        <h2 className="text-lg font-bold text-white">제5조 (서비스의 중단)</h2>
                         <ol className="list-decimal pl-5 space-y-2">
-                            <li>회사는 컴퓨터 등 정보통신설비를 보수점검, 교체 및 고장, 통신의 두절 등의 사유가 발생한 경우에는 서비스의 제공을 일시적으로 중단할 수 있습니다.</li>
+                            <li>회사는 컴퓨터 등 정보통신설비의 보수점검, 교체 및 고장, 통신의 두절 등의 사유가 발생한 경우에는 서비스의 제공을 일시적으로 중단할 수 있습니다.</li>
                             <li>회사는 제1항의 사유로 서비스의 제공이 일시적으로 중단됨으로 인하여 이용자 또는 제3자가 입은 손해에 대하여 배상합니다. 단, 회사가 고의 또는 과실이 없음을 입증하는 경우에는 그러하지 아니합니다.</li>
                         </ol>
-                    </section>
+                    </div>
 
-                    <section>
-                        <h2 className="text-xl font-medium text-foreground mb-4">제6조 (개인정보보호)</h2>
+                    <div className="p-8 rounded-3xl bg-white/[0.02] border border-white/10 space-y-3">
+                        <h2 className="text-lg font-bold text-white">제6조 (개인정보보호)</h2>
                         <p>
-                            회사는 이용자의 개인정보 수집시 서비스제공을 위하여 필요한 범위에서 최소한의 개인정보를 수집합니다. 회사는 개인정보처리방침을 통해 이용자의 개인정보를 보호하기 위해 노력합니다.
+                            회사는 이용자의 개인정보 수집 시 서비스 제공을 위하여 필요한 범위에서 최소한의 개인정보를 수집합니다. 회사는 개인정보처리방침을 통해 이용자의 개인정보를 보호하기 위해 노력합니다.
                         </p>
-                    </section>
+                    </div>
 
-                    <section>
-                        <h2 className="text-xl font-medium text-foreground mb-4">제7조 (회사의 의무)</h2>
+                    <div className="p-8 rounded-3xl bg-white/[0.02] border border-white/10 space-y-3">
+                        <h2 className="text-lg font-bold text-white">제7조 (회사의 의무)</h2>
                         <ol className="list-decimal pl-5 space-y-2">
-                            <li>회사는 법령과 이 약관이 금지하거나 공서양속에 반하는 행위를 하지 않으며 이 약관이 정하는 바에 따라 지속적이고 안정적으로 서비스를 제공하는데 최선을 다하여야 합니다.</li>
+                            <li>회사는 법령과 이 약관이 금지하거나 공서양속에 반하는 행위를 하지 않으며 이 약관이 정하는 바에 따라 지속적이고 안정적으로 서비스를 제공하는 데 최선을 다하여야 합니다.</li>
                             <li>회사는 이용자가 안전하게 인터넷 서비스를 이용할 수 있도록 이용자의 개인정보(신용정보 포함)보호를 위한 보안 시스템을 갖추어야 합니다.</li>
                         </ol>
-                    </section>
+                    </div>
 
-                    <section>
-                        <h2 className="text-xl font-medium text-foreground mb-4">제8조 (이용자의 의무)</h2>
+                    <div className="p-8 rounded-3xl bg-white/[0.02] border border-white/10 space-y-3">
+                        <h2 className="text-lg font-bold text-white">제8조 (이용자의 의무)</h2>
                         <p className="mb-2">이용자는 다음 행위를 하여서는 안 됩니다.</p>
                         <ol className="list-decimal pl-5 space-y-2">
                             <li>소프트웨어/데이터 복제(Crawling) 및 역설계(Reverse Engineering)</li>
@@ -94,38 +88,38 @@ const TermsOfService = () => {
                             <li>회사 기타 제3자의 명예를 손상시키거나 업무를 방해하는 행위</li>
                             <li>외설 또는 폭력적인 메시지, 화상, 음성, 기타 공서양속에 반하는 정보를 몰에 공개 또는 게시하는 행위</li>
                         </ol>
-                    </section>
+                    </div>
 
-                    <section>
-                        <h2 className="text-xl font-medium text-foreground mb-4">제9조 (분쟁해결)</h2>
+                    <div className="p-8 rounded-3xl bg-white/[0.02] border border-white/10 space-y-3">
+                        <h2 className="text-lg font-bold text-white">제9조 (분쟁해결)</h2>
                         <ol className="list-decimal pl-5 space-y-2">
                             <li>회사는 이용자가 제기하는 정당한 의견이나 불만을 반영하고 그 피해를 보상처리하기 위하여 피해보상처리기구를 설치, 운영합니다.</li>
                             <li>회사는 이용자로부터 제출되는 불만사항 및 의견은 우선적으로 그 사항을 처리합니다. 다만, 신속한 처리가 곤란한 경우에는 이용자에게 그 사유와 처리일정을 즉시 통보해 드립니다.</li>
                         </ol>
-                    </section>
+                    </div>
 
-                    <section>
-                        <h2 className="text-xl font-medium text-foreground mb-4">제10조 (준거법 및 재판관할)</h2>
+                    <div className="p-8 rounded-3xl bg-white/[0.02] border border-white/10 space-y-3">
+                        <h2 className="text-lg font-bold text-white">제10조 (준거법 및 재판관할)</h2>
                         <ol className="list-decimal pl-5 space-y-2">
                             <li>회사와 이용자 간에 발생한 분쟁에 관한 소송은 제소 당시의 이용자의 주소에 의하고, 주소가 없는 경우에는 거소를 관할하는 지방법원의 전속관할로 합니다. 다만, 제소 당시 이용자의 주소 또는 거소가 분명하지 않거나 외국 거주자의 경우에는 민사소송법상의 관할법원에 제기합니다.</li>
                             <li>회사와 이용자 간에 제기된 소송에는 대한민국 법을 적용합니다.</li>
                         </ol>
-                    </section>
+                    </div>
 
-                    <div className="mt-12 pt-8 border-t border-border">
-                        <h3 className="text-lg font-medium mb-4">문의처</h3>
+                    <div className="p-8 rounded-3xl bg-white/[0.02] border border-white/10 space-y-3">
+                        <h3 className="text-base font-bold text-cyan-300">문의처</h3>
                         <p>이용약관과 관련하여 궁금한 점이 있으시면 아래 연락처로 문의해 주시기 바랍니다.</p>
-                        <ul className="mt-4 space-y-1">
-                            <li>이메일: {COMPANY_INFO.contact.email}</li>
+                        <ul className="space-y-1 font-mono text-xs text-slate-300">
+                            <li className="flex items-center flex-wrap gap-1">
+                                <span>이메일:</span>
+                                <ObfuscatedEmail />
+                            </li>
                             <li>전화번호: {COMPANY_INFO.contact.phone}</li>
                         </ul>
                     </div>
                 </div>
             </main>
-
-            <ScrollToTop />
-            <Footer />
-        </div>
+        </PageLayout>
     );
 };
 

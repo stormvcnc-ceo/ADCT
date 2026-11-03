@@ -13,6 +13,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import EmailRefusal from "./pages/EmailRefusal";
 import BusinessInfo from "./pages/BusinessInfo";
+import StitchPreview from "./pages/StitchPreview";
 import NotFound from "./pages/NotFound";
 
 const App = () => (
@@ -23,6 +24,7 @@ const App = () => (
       <ScrollToTopHandler />
       <Routes>
         <Route path="/" element={<Index />} />
+        <Route path="/preview-stitch" element={<StitchPreview />} />
         <Route path="/about" element={<About />} />
         <Route path="/capabilities" element={<Capabilities />} />
         <Route path="/process" element={<Process />} />

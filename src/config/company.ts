@@ -58,7 +58,7 @@ export const COMPANY_INFO = {
 
     // 저작권
     copyright: {
-        year: new Date().getFullYear(),
+        year: 2026,
         text: 'ADCT. All rights reserved.'
     }
 };
