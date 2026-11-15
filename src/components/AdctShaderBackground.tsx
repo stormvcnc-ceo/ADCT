@@ -85,24 +85,19 @@ export const AdctShaderBackground: React.FC = () => {
         float glow1 = 0.04 / (abs(ribbon1) + 0.05);
         float glow2 = 0.03 / (abs(ribbon2) + 0.06);
         
-        vec3 colDeep = vec3(0.015, 0.02, 0.05);
-        vec3 colBlue = vec3(0.05, 0.15, 0.45);
-        vec3 colCyan = vec3(0.0, 0.75, 0.95);
-        vec3 colAmber = vec3(0.98, 0.65, 0.25);
+        vec3 colDeep = vec3(0.055, 0.058, 0.070);
+        vec3 colSlate = vec3(0.14, 0.15, 0.19);
+        vec3 colSilver = vec3(0.45, 0.49, 0.56);
+        vec3 colWarm = vec3(0.62, 0.56, 0.46);
         
-        vec3 finalColor = mix(colDeep, colBlue, clamp(uv.y * 0.5 + 0.5, 0.0, 1.0) * 0.4);
+        vec3 finalColor = mix(colDeep, colSlate, clamp(uv.y * 0.5 + 0.5, 0.0, 1.0) * 0.4);
         
-        finalColor += colCyan * glow1 * 0.7;
-        finalColor += colBlue * (glow1 * 0.5 + glow2 * 0.4);
-        finalColor += colAmber * glow2 * 0.35;
+        finalColor += colSilver * glow1 * 0.42;
+        finalColor += colSlate * (glow1 * 0.45 + glow2 * 0.35);
+        finalColor += colWarm * glow2 * 0.24;
         
-        float vig = smoothstep(1.2, 0.3, dist);
+        float vig = smoothstep(1.3, 0.25, dist);
         finalColor *= vig;
-        
-        float dots = fract(sin(dot(uv.xy + floor(t * 0.1), vec2(12.9898, 78.233))) * 43758.5453);
-        if (dots > 0.992) {
-          finalColor += vec3(0.8, 0.9, 1.0) * (sin(u_time * 3.0 + dots * 20.0) * 0.5 + 0.5) * 0.6;
-        }
 
         gl_FragColor = vec4(finalColor, 1.0);
       }
@@ -176,9 +171,8 @@ export const AdctShaderBackground: React.FC = () => {
 
   return (
     <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
-      <canvas ref={canvasRef} className="w-full h-full block opacity-75" />
-      {/* 셰이더 위 오버레이 그라디언트 */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0e131f]/20 via-[#0e131f]/60 to-[#0e131f]" />
+      <canvas ref={canvasRef} className="w-full h-full block opacity-85" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#111216]/15 via-[#111216]/45 to-[#111216]" />
     </div>
   );
 };

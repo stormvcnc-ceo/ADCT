@@ -25,7 +25,7 @@ const ObfuscatedEmail: React.FC<ObfuscatedEmailProps> = ({
             {showRefusalNotice && (
                 <Link
                     to="/email-refusal"
-                    className="inline-block text-[11px] text-slate-400 hover:text-cyan-300 underline underline-offset-2 transition-colors ml-0.5"
+                    className="inline-block text-[11px] opacity-75 hover:opacity-100 underline underline-offset-2 transition-opacity ml-0.5"
                     title="이메일 무단 수집 거부 정책 보기"
                 >
                     [이메일무단수집거부]

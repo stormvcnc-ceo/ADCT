@@ -1,120 +1,111 @@
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 import PageLayout from '@/components/PageLayout';
-import AiBadgeWrapper from '@/components/AiBadgeWrapper';
+
+const VALUES = [
+  {
+    no: '01',
+    tag: 'STORY',
+    title: 'Creative Storytelling',
+    description:
+      '모든 브랜드에는 고유한 맥락이 있습니다. 시장과 소비자의 언어로 설득력 있는 내러티브를 설계합니다.',
+  },
+  {
+    no: '02',
+    tag: 'EMOTION',
+    title: 'Emotional Impact',
+    description:
+      '정보 전달을 넘어 공감을 이끌어내는 크리에이티브. 데이터 기반의 인사이트와 섬세한 아트 디렉션을 결합합니다.',
+  },
+  {
+    no: '03',
+    tag: 'STRATEGY',
+    title: 'Strategic Campaigns',
+    description:
+      '명확한 타겟 설정과 매체 전략을 통해 측정 가능한 사업 성과로 이어지는 캠페인을 집행합니다.',
+  },
+];
 
 const About = () => {
   return (
     <PageLayout>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
-        <div className="absolute top-0 right-0 -z-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl" />
-        <div className="max-w-4xl space-y-6">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-400/30 text-xs font-medium text-cyan-300">
-            <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
-            ABOUT ADCT AGENCY
-          </div>
-
-          <h1 className="text-5xl sm:text-7xl font-black tracking-tight leading-tight text-white">
-            We Prove<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500">
-              Perfection.
-            </span>
+      <section className="pt-28 pb-16 px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="max-w-3xl space-y-5">
+          <span className="text-xs font-mono text-zinc-500 tracking-wide block">About ADCT</span>
+          <h1 className="text-4xl sm:text-6xl font-semibold tracking-tight leading-[1.1] text-zinc-950">
+            We Prove
+            <br />
+            <span className="text-zinc-500">Perfection.</span>
           </h1>
-
-          <p className="text-base sm:text-xl text-slate-300 font-light leading-relaxed max-w-2xl">
-            ADCT는 단순한 기능을 보여주지 않습니다. 완성도를 증명합니다.<br />
-            브랜드의 숨겨진 본질을 발견하고, 매혹적인 디자인과 전략으로 완성하는 크리에이티브 파트너입니다.
+          <p className="text-base sm:text-lg text-zinc-600 leading-relaxed max-w-prose">
+            ADCT는 단순한 광고 제작을 넘어 결과의 완성도를 증명합니다. 브랜드의 본질을 파악하고 전략과 크리에이티브로 시장의 반응을 만듭니다.
           </p>
         </div>
       </section>
 
       {/* Our Story */}
-      <section className="py-24 px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/[0.08]">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-6">
-            <span className="text-xs uppercase tracking-widest text-amber-400 font-semibold font-mono">
-              01 — OUR STORY
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
-              "왜 대부분의 광고는<br />기억에 남지 않을까?"
+      <section className="py-20 px-6 lg:px-8 max-w-7xl mx-auto border-t border-zinc-200">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="lg:col-span-6 space-y-6">
+            <span className="text-xs font-mono text-zinc-500">01 — Our Story</span>
+            <h2 className="text-2xl sm:text-4xl font-semibold tracking-tight text-zinc-950 leading-snug">
+              "왜 대부분의 광고는
+              <br />
+              기억에 남지 않을까?"
             </h2>
-            <div className="space-y-4 text-sm text-slate-300 leading-relaxed font-light">
+            <div className="space-y-4 text-sm sm:text-base text-zinc-600 leading-relaxed max-w-prose">
+              <p>2005년, 우리는 단순하지만 본질적인 질문에서 출발했습니다.</p>
               <p>
-                2005년, 우리는 단순하지만 본질적인 질문에서 출발했습니다.
+                답을 찾는 과정에서 깨달았습니다. 효과적인 광고는 제품의 스펙을 나열하는 것이 아니라, 수용자의 감정에 닿아 자발적인 행동을 이끌어내는 것에서 시작된다는 사실을.
               </p>
               <p>
-                답을 찾는 과정에서 깨달았습니다. 진정한 광고는 단순히 제품의 스펙을 나열하는 것이 아니라, 사람들의 감정에 깊숙이 닿아 공감을 이끌어내고, 끝내 자발적인 행동을 만들어내는 것에서 시작된다는 사실을.
+                ADCT는 이러한 원칙을 바탕으로 클라이언트와 함께 브랜드 고유의 서사를 발굴하고, 정제된 비주얼과 전략적 매체 집행으로 시장과 연결합니다.
               </p>
-              <p>
-                ADCT는 이러한 철학을 바탕으로 설립되었습니다. 우리는 클라이언트와 함께 브랜드 내면에 잠든 고유한 서사를 발굴하고, 세련된 비주얼과 전략적 캠페인으로 세상과 연결합니다.
-              </p>
-              <p className="text-cyan-300 font-medium pt-2">
-                Bold, Creative, Emotional, Strategic, Memorable.<br />
-                이것이 우리가 20년간 지켜온 크리에이티브의 지향점입니다.
+              <p className="text-zinc-900 font-medium pt-2">
+                Bold, Creative, Strategic, Memorable.
+                <span className="block text-xs text-zinc-500 font-normal mt-1">
+                  2005년부터 이어온 ADCT의 크리에이티브 기준입니다.
+                </span>
               </p>
             </div>
           </div>
 
-          <div className="relative">
-            <AiBadgeWrapper className="relative w-full aspect-video sm:aspect-[4/3] block rounded-3xl overflow-hidden border border-white/15 shadow-2xl">
+          <div className="lg:col-span-6">
+            <div className="relative w-full aspect-[4/3] block rounded-xl overflow-hidden border border-zinc-200/80 bg-zinc-900 shadow-sm">
               <img
                 src="/images/about-story.png"
                 alt="Creative process"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0e131f]/80 via-transparent to-transparent" />
-            </AiBadgeWrapper>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Our Values */}
-      <section className="py-24 px-6 lg:px-8 border-t border-white/[0.06] bg-[#080e1a]/80">
-        <div className="max-w-7xl mx-auto space-y-16">
-          <div className="text-center space-y-3">
-            <span className="text-xs uppercase tracking-widest text-cyan-400 font-semibold font-mono">Core Values</span>
-            <h2 className="text-3xl sm:text-5xl font-extrabold text-white">Our Values</h2>
-            <p className="text-sm text-slate-400 max-w-xl mx-auto">
-              ADCT의 모든 프로젝트는 이 세 가지 핵심 가치를 뼈대로 구축됩니다.
+      <section className="py-24 px-6 lg:px-8 border-t border-zinc-200/80 bg-[#EFEFE9]">
+        <div className="max-w-7xl mx-auto space-y-12">
+          <div className="max-w-2xl space-y-2">
+            <span className="text-xs font-mono text-zinc-500">Core Values</span>
+            <h2 className="text-2xl sm:text-4xl font-semibold tracking-tight text-zinc-950">
+              Our Values
+            </h2>
+            <p className="text-sm text-zinc-600">
+              ADCT의 모든 프로젝트는 세 가지 실무 원칙 위에서 움직입니다.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Creative Storytelling",
-                description: "모든 브랜드에는 고유한 이야기가 있습니다. 우리는 그 이야기를 발견하고 사람들의 마음을 움직이는 독창적 내러티브로 재창조합니다.",
-                icon: "💡",
-                tag: "STORY"
-              },
-              {
-                title: "Emotional Impact",
-                description: "광고는 감정에서 시작합니다. 우리는 정밀한 데이터와 인간적 인사이트를 결합해 깊은 감동과 공감을 이끌어냅니다.",
-                icon: "❤️",
-                tag: "EMOTION"
-              },
-              {
-                title: "Strategic Campaigns",
-                description: "아름다운 디자인만으로는 충분하지 않습니다. 명확한 목표와 채널 전략을 통해 측정 가능한 비즈니스 결과를 도출합니다.",
-                icon: "🎯",
-                tag: "STRATEGY"
-              }
-            ].map((value, index) => (
-              <div
-                key={index}
-                className="p-8 rounded-3xl bg-white/[0.02] border border-white/10 hover:border-cyan-500/40 hover:bg-white/[0.05] transition-all duration-300 space-y-4"
-              >
-                <div className="flex items-center justify-between">
-                  <span className="text-3xl">{value.icon}</span>
-                  <span className="text-[10px] font-mono font-semibold px-2.5 py-1 rounded-full bg-cyan-400/10 text-cyan-300 border border-cyan-400/20">
-                    {value.tag}
-                  </span>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {VALUES.map((value) => (
+              <div key={value.no} className="border-t border-zinc-300 pt-6 space-y-3">
+                <div className="flex items-center justify-between text-xs font-mono text-zinc-500">
+                  <span>{value.no}</span>
+                  <span>{value.tag}</span>
                 </div>
-                <h3 className="text-xl font-bold text-white">{value.title}</h3>
-                <p className="text-xs sm:text-sm text-slate-400 leading-relaxed font-light">
-                  {value.description}
-                </p>
+                <h3 className="text-xl font-semibold text-zinc-900">{value.title}</h3>
+                <p className="text-sm text-zinc-600 leading-relaxed">{value.description}</p>
               </div>
             ))}
           </div>
@@ -122,79 +113,63 @@ const About = () => {
       </section>
 
       {/* Team Philosophy */}
-      <section className="py-24 px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/[0.08]">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="order-2 lg:order-1 relative">
-            <AiBadgeWrapper className="relative w-full aspect-video sm:aspect-[4/3] block rounded-3xl overflow-hidden border border-white/15 shadow-2xl">
+      <section className="py-24 px-6 lg:px-8 max-w-7xl mx-auto border-t border-zinc-200">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="lg:col-span-6 order-2 lg:order-1">
+            <div className="relative w-full aspect-[4/3] block rounded-xl overflow-hidden border border-zinc-200/80 bg-zinc-900 shadow-sm">
               <img
                 src="/images/team-roles-abstract.png"
                 alt="Creative teamwork"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0e131f]/80 via-transparent to-transparent" />
-            </AiBadgeWrapper>
+            </div>
           </div>
 
-          <div className="order-1 lg:order-2 space-y-6">
-            <span className="text-xs uppercase tracking-widest text-cyan-400 font-semibold font-mono">
-              02 — TEAM PHILOSOPHY
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
-              전문가들이 모여<br />하나의 비전을 완성합니다.
+          <div className="lg:col-span-6 order-1 lg:order-2 space-y-6">
+            <span className="text-xs font-mono text-zinc-500">02 — Team Philosophy</span>
+            <h2 className="text-2xl sm:text-4xl font-semibold tracking-tight text-zinc-950 leading-snug">
+              각 분야의 전문가가 모여
+              <br />
+              하나의 결과를 만듭니다.
             </h2>
-            <div className="space-y-4 text-sm text-slate-300 leading-relaxed font-light">
+            <div className="space-y-4 text-sm sm:text-base text-zinc-600 leading-relaxed max-w-prose">
               <p>
-                ADCT는 카피라이터, 아트 디렉터, 브랜드 전략가, 크리에이티브 테크니션 등 각 분야 최고의 전문가들이 긴밀하게 협업하는 크리에이티브 집단입니다.
+                ADCT는 브랜드 전략가, 카피라이터, 아트 디렉터, 미디어 플래너, 디지털 프로덕션 팀이 하나의 호흡으로 움직이는 실무 중심 에이전시입니다.
               </p>
-              <p>
-                "광고는 판매를 위해 존재하는 것이 아니라, 감동을 위해 존재한다."<br />
-                이것이 우리 팀이 공유하는 변함없는 신념입니다.
+              <p className="text-zinc-800 font-medium">
+                "광고는 단순한 노출이 아니라, 신뢰를 쌓는 과정입니다."
               </p>
-            </div>
-
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-white/10">
-              <div className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 text-center">
-                <span className="text-xs text-slate-400 block mb-1">설립</span>
-                <span className="text-lg font-bold font-mono text-cyan-300">2005년</span>
-              </div>
-              <div className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 text-center">
-                <span className="text-xs text-slate-400 block mb-1">완료 캠페인</span>
-                <span className="text-lg font-bold font-mono text-cyan-300">500+</span>
-              </div>
-              <div className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 text-center">
-                <span className="text-xs text-slate-400 block mb-1">신뢰 파트너</span>
-                <span className="text-lg font-bold font-mono text-cyan-300">100+</span>
-              </div>
-              <div className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 text-center">
-                <span className="text-xs text-slate-400 block mb-1">고객 만족도</span>
-                <span className="text-lg font-bold font-mono text-amber-400">98.4%</span>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 px-6 border-t border-white/[0.06] bg-[#080e1a]/80 text-center">
-        <div className="max-w-3xl mx-auto space-y-6">
-          <span className="text-xs uppercase tracking-widest text-cyan-400 font-semibold font-mono">Let's Connect</span>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white">Let's start together</h2>
-          <p className="text-slate-300 text-sm leading-relaxed">
-            브랜드의 진정한 가치를 발굴하고 싶다면, 지금 바로 ADCT와 함께 새로운 여정을 시작하세요.
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
+      {/* CTA Section (Dark Charcoal Bookend) */}
+      <section className="py-24 px-6 lg:px-8 border-t border-white/[0.08] bg-[#141416] text-zinc-50">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-end justify-between gap-8">
+          <div className="space-y-3 max-w-2xl">
+            <span className="text-xs font-mono text-zinc-400">Let&apos;s Connect</span>
+            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-zinc-50">
+              브랜드의 다음 단계를 함께 준비합니다.
+            </h2>
+            <p className="text-zinc-400 text-sm leading-relaxed">
+              신규 런칭, 분양 마케팅, 브랜드 리뉴얼까지 프로젝트의 성격에 맞춘 실행안을 제안해 드립니다.
+            </p>
+          </div>
+          <div className="flex flex-wrap items-center gap-3 shrink-0">
             <Link
               to="/capabilities"
-              className="px-8 py-4 rounded-full bg-white/5 border border-white/15 text-white font-medium text-sm hover:bg-white/10 transition-all"
+              className="px-5 py-3 rounded-md border border-white/[0.15] hover:border-white/30 hover:bg-white/[0.04] text-zinc-200 font-medium text-sm transition-all"
             >
               서비스 알아보기
             </Link>
             <Link
               to="/contact"
-              className="px-8 py-4 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold text-sm shadow-xl shadow-cyan-500/25 hover:scale-105 transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-zinc-100 hover:bg-white text-zinc-950 font-medium text-sm transition-all active:scale-[0.98]"
             >
-              프로젝트 문의하기 →
+              프로젝트 문의하기
+              <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
             </Link>
           </div>
         </div>

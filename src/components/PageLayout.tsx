@@ -13,7 +13,7 @@ const PageLayout = ({ children }: PageLayoutProps) => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-[#0e131f] text-slate-100 font-sans selection:bg-cyan-500 selection:text-black relative overflow-x-hidden">
+        <div className="min-h-screen bg-[#F8F8F6] text-[#141416] font-sans selection:bg-zinc-900 selection:text-zinc-50 relative overflow-x-hidden">
             <Navigation />
             <main>{children}</main>
             <ScrollToTop />
