@@ -4,8 +4,8 @@ import { COMPANY_INFO, NAV_ITEMS } from '@/config/company';
 const Footer = () => {
   return (
     <footer className="border-t border-white/[0.08] bg-[#0E0F12] text-zinc-400 text-xs">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-10">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           {/* Brand */}
           <div className="md:col-span-7 space-y-4">
             <Link to="/" className="inline-block">
@@ -42,7 +42,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright & Links */}
-        <div className="border-t border-white/[0.06] mt-12 pt-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <div className="border-t border-white/[0.06] mt-8 pt-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <p className="text-[11px] text-zinc-500">
             © {COMPANY_INFO.copyright.year} {COMPANY_INFO.name.full}. All rights reserved.
           </p>
