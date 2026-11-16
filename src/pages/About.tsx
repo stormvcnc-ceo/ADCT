@@ -157,16 +157,16 @@ const About = () => {
               신규 런칭, 분양 마케팅, 브랜드 리뉴얼까지 프로젝트의 성격에 맞춘 실행안을 제안해 드립니다.
             </p>
           </div>
-          <div className="flex flex-wrap items-center gap-3 shrink-0">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 shrink-0 w-full sm:w-auto">
             <Link
               to="/capabilities"
-              className="px-5 py-3 rounded-md border border-white/[0.15] hover:border-white/30 hover:bg-white/[0.04] text-zinc-200 font-medium text-sm transition-all"
+              className="inline-flex items-center justify-center sm:min-w-[172px] px-6 py-3 rounded-md border border-white/[0.15] hover:border-white/30 hover:bg-white/[0.04] text-zinc-200 font-medium text-sm transition-all active:scale-[0.98]"
             >
               서비스 알아보기
             </Link>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-zinc-100 hover:bg-white text-zinc-950 font-medium text-sm transition-all active:scale-[0.98]"
+              className="inline-flex items-center justify-center gap-2 sm:min-w-[172px] px-6 py-3 rounded-md bg-zinc-100 hover:bg-white text-zinc-950 font-medium text-sm transition-all active:scale-[0.98]"
             >
               프로젝트 문의하기
               <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
